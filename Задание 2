@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>лаб 3 </title>
+</head>
+<body>
+    <?php
+        $information = array (
+            array(
+                name => "Александр",
+                surname => "Новиков ",
+                age => " 35",
+                adress =>"ул.Ленина 99 ",
+                number => "445-13-53 ",
+                money => 5000
+            ),
+            array(
+            name => "Алексей",
+                surname => "Бодров ",
+                age => " 28",
+                adress => "пр.Ворошиловский 43 ",
+                number => "341-43-12 ",
+                money => 5500
+            ),          
+            array(
+                name => "Николай",
+                surname => "Хлельницкий ",
+                age => "28 ",
+                adress => "Социалистическая 25 ",
+                number => "452-451-34 ",
+                money => 10000
+            ),
+            array(
+                name => "Олег",
+                surname => " Нестеров",
+                age => "44 ",
+                adress => "ул.Петровка 11 ",
+                number => "331-43-43 ",
+                money => 4998)
+            );
+        
+        echo '<table border = "1">';
+        echo '<th><strong> Имя </strong></th>';
+        echo '<th><strong> Фамилия </strong></th>';
+        echo '<th><strong> Возраст </strong></th>';
+        echo '<th><strong> Адрес </strong></th>';
+        echo '<th><strong> Номер </strong></th>';
+        echo '<th><strong> Зарплата </strong></th>';
+    
+
+        $totalCost = 0;
+
+        foreach ($information as $array){
+            echo "<tr>";
+            echo "<td> $array[name] </td>";
+            echo "<td> $array[surname] </td>";
+            echo "<td> $array[age] </td>";
+            echo "<td> $array[adress] </td>";
+            echo "<td> $array[number] </td>";
+            echo "<td> $array[money] </td>";
+            echo "</tr>";
+            $totalCost += $array[money];
+        }
+        echo "</table>";
+        echo "Всего бабла: <strong>" . $totalCost . "</strong>";
+            
+
+ ?>
+</body>
+</html>
